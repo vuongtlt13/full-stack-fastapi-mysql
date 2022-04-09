@@ -31,11 +31,11 @@ target_metadata = Base.metadata
 
 
 def get_url():
-    user = os.getenv("POSTGRES_USER", "postgres")
-    password = os.getenv("POSTGRES_PASSWORD", "")
-    server = os.getenv("POSTGRES_SERVER", "db")
-    db = os.getenv("POSTGRES_DB", "app")
-    return f"postgresql://{user}:{password}@{server}/{db}"
+    user = os.getenv("MYSQL_USER", "root")
+    password = os.getenv("MYSQL_PASSWORD", "root")
+    host = os.getenv("MYSQL_HOST", "db")
+    db = os.getenv("MYSQL_DATABASE", "app")
+    return f"mysql+pymysql://{user}:{password}@{host}/{db}"
 
 
 def run_migrations_offline():

@@ -17,9 +17,10 @@
     "smtp_password": "",
     "smtp_emails_from_email": "info@{{cookiecutter.domain_main}}",
 
-    "postgres_password": "changethis",
-    "pgadmin_default_user": "{{cookiecutter.first_superuser}}",
-    "pgadmin_default_user_password": "{{cookiecutter.first_superuser_password}}",
+    "mysql_user": "root1",
+    "mysql_password": "root",
+    "mysql_database": "{{cookiecutter.project_slug}}",
+    "mysql_root_password": "root",
 
     "traefik_constraint_tag": "{{cookiecutter.domain_main}}",
     "traefik_constraint_tag_staging": "{{cookiecutter.domain_staging}}",

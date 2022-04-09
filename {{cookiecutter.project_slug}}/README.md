@@ -28,7 +28,6 @@ Automatic interactive documentation with Swagger UI (from the OpenAPI backend): 
 
 Alternative automatic documentation with ReDoc (from the OpenAPI backend): http://localhost/redoc
 
-PGAdmin, PostgreSQL web administration: http://localhost:5050
 
 Flower, administration of Celery tasks: http://localhost:5555
 
@@ -485,7 +484,7 @@ version: '3'
 services:
   db:
     volumes:
-      - 'app-db-data:/var/lib/postgresql/data/pgdata'
+      - 'app-db-data:/var/lib/mysql/'
     deploy:
       placement:
         constraints:
@@ -499,7 +498,7 @@ version: '3'
 services:
   db:
     volumes:
-      - 'app-db-data:/var/lib/postgresql/data/pgdata'
+      - 'app-db-data:/var/lib/mysql/'
     deploy:
       placement:
         constraints:
@@ -711,7 +710,6 @@ Automatic Interactive Docs (Swagger UI): https://{{cookiecutter.domain_main}}/do
 
 Automatic Alternative Docs (ReDoc): https://{{cookiecutter.domain_main}}/redoc
 
-PGAdmin: https://pgadmin.{{cookiecutter.domain_main}}
 
 Flower: https://flower.{{cookiecutter.domain_main}}
 
@@ -727,7 +725,6 @@ Automatic Interactive Docs (Swagger UI): https://{{cookiecutter.domain_staging}}
 
 Automatic Alternative Docs (ReDoc): https://{{cookiecutter.domain_staging}}/redoc
 
-PGAdmin: https://pgadmin.{{cookiecutter.domain_staging}}
 
 Flower: https://flower.{{cookiecutter.domain_staging}}
 
@@ -742,8 +739,6 @@ Backend: http://localhost/api/
 Automatic Interactive Docs (Swagger UI): https://localhost/docs
 
 Automatic Alternative Docs (ReDoc): https://localhost/redoc
-
-PGAdmin: http://localhost:5050
 
 Flower: http://localhost:5555
 
@@ -761,8 +756,6 @@ Automatic Interactive Docs (Swagger UI): https://local.dockertoolbox.tiangolo.co
 
 Automatic Alternative Docs (ReDoc): https://local.dockertoolbox.tiangolo.com/redoc
 
-PGAdmin: http://local.dockertoolbox.tiangolo.com:5050
-
 Flower: http://local.dockertoolbox.tiangolo.com:5555
 
 Traefik UI: http://local.dockertoolbox.tiangolo.com:8090
@@ -778,8 +771,6 @@ Backend: http://dev.{{cookiecutter.domain_main}}/api/
 Automatic Interactive Docs (Swagger UI): https://dev.{{cookiecutter.domain_main}}/docs
 
 Automatic Alternative Docs (ReDoc): https://dev.{{cookiecutter.domain_main}}/redoc
-
-PGAdmin: http://dev.{{cookiecutter.domain_main}}:5050
 
 Flower: http://dev.{{cookiecutter.domain_main}}:5555
 
@@ -797,19 +788,17 @@ Automatic Interactive Docs (Swagger UI): https://localhost.tiangolo.com/docs
 
 Automatic Alternative Docs (ReDoc): https://localhost.tiangolo.com/redoc
 
-PGAdmin: http://localhost.tiangolo.com:5050
-
 Flower: http://localhost.tiangolo.com:5555
 
 Traefik UI: http://localhost.tiangolo.com:8090
 
 ## Project generation and updating, or re-generating
 
-This project was generated using https://github.com/tiangolo/full-stack-fastapi-postgresql with:
+This project was generated using https://github.com/vuongtlt13/full-stack-fastapi-mysql with:
 
 ```bash
 pip install cookiecutter
-cookiecutter https://github.com/tiangolo/full-stack-fastapi-postgresql
+cookiecutter https://github.com/vuongtlt13/full-stack-fastapi-mysql
 ```
 
 You can check the variables used during generation in the file `cookiecutter-config-file.yml`.
@@ -827,7 +816,7 @@ You can use that file while generating a new project to reuse all those variable
 For example, run:
 
 ```console
-$ cookiecutter --config-file ./cookiecutter-config-file.yml --output-dir ../project-copy https://github.com/tiangolo/full-stack-fastapi-postgresql
+$ cookiecutter --config-file ./cookiecutter-config-file.yml --output-dir ../project-copy https://github.com/vuongtlt13/full-stack-fastapi-mysql
 ```
 
 That will use the file `cookiecutter-config-file.yml` in the current directory (in this project) to generate a new project inside a sibling directory `project-copy`.
